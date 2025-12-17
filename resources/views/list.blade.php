@@ -2,6 +2,16 @@
 @section('title', ' Book List Page')
 
 @section('content')
+<form class="d-flex p-2" role="search" method="GET" action="{{ route('search') }}">
+    <input class="form-control me-2" 
+        type="text" 
+        placeholder="Search..." 
+        aria-label="Search" 
+        name="search" 
+        value="{{ request('search') }}"
+    />
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
     <table class="table">
         <thead>
             <tr>

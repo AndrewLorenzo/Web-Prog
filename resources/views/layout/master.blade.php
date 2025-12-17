@@ -20,7 +20,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
@@ -28,7 +28,7 @@
                         <a class="nav-link" href="{{ route('show') }}">List</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     @auth
                         <li class="nav-item ">
                             <span class="navbar-text fw-bold d-flex align-items-center me-1">
@@ -44,12 +44,15 @@
                             </form>
                         </li>
                     @else
+                    <div class="d-flex">
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
+                    </div>
+                        
                     @endauth
                 </ul>
             </div>

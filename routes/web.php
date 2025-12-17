@@ -10,6 +10,7 @@ Route::get('/book', [BookController::class, 'show'])->name('show')->middleware('
 Route::get('/book/{id}', [BookController::class, 'edit'])->name('edit')->middleware('simple.auth');
 Route::patch('/book/{id}', [BookController::class, 'update'])->name('update')->middleware('simple.auth');
 Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('delete')->middleware('simple.auth');
+Route::get('/search', [BookController::class, 'search'])->name('search')->middleware('simple.auth');
 
 //Login
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');

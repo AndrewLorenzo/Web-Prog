@@ -18,6 +18,21 @@ class BookController extends Controller
         return view('welcome', compact('categories'));
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->query('search');
+        $books = Book::query()
+            ->when($search, function ($query, $search) {
+                $query->where(function ($q) use ($search) {
+                    $q->where('title', 'LIKE', "%{$search}%")
+                    ->orWhere('publisher', 'LIKE', "%{$search}%")
+                    ->orWhere('author', 'LIKE', "%{$search}%");
+                });
+            })->paginate(10);
+
+        return view('list', compact('books'));
+    }
+
     public function create(Request $req)
     {
 
