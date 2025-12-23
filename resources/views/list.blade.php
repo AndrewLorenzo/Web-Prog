@@ -16,6 +16,7 @@
         <thead>
             <tr>
                 <th scope="col">No.</th>
+                <th scope="col">ID.</th>
                 <th scope="col">Title</th>
                 <th scope="col">Author</th>
                 <th scope="col">Publisher</th>
@@ -30,6 +31,7 @@
                 <tr>
                     <!-- <th scope="row">{{ $b->id }}</th> -->
                     <th scope="row"> {{ $i++ }} </th>
+                    <td>{{ $b->id }}</td>
                     <td>{{ $b->title }}</td>
                     <td>{{ $b->author }}</td>
                     <td>{{ $b->publisher }}</td>
