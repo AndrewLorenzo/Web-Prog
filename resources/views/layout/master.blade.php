@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link active text-dark" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('show') }}">List</a>
+                        <a class="nav-link text-dark" href="{{ route('show') }}">List</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
@@ -46,10 +46,10 @@
                     @else
                     <div class="d-flex">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            <a class="nav-link text-dark" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                            <a class="nav-link text-dark" href="{{ route('register') }}">Register</a>
                         </li>
                     </div>
                         
