@@ -37,7 +37,7 @@
                     <td>{{ $b->publisher }}</td>
                     <td>{{ $b->year }}</td>
                     <td>{{ $b->category->name }}</td>
-                    @if(Auth::user()->role === 'admin')
+                    @if(strtolower(Auth::user()->role) === 'admin')
                         <td>
                             <a href="{{ route('edit', $b->id) }}" class="btn btn-success">Update</a>
                             <form action="{{ route('delete', $b->id) }}" method="POST">
