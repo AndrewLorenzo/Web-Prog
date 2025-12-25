@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BookController::class, 'index'])->name('home')->middleware('simple.auth');
 Route::post('/book/add', [BookController::class, 'create'])->name('create')->middleware('simple.auth');
-Route::get('/book', [BookController::class, 'show'])->name('show')->middleware('simple.auth:admin');
-Route::get('/book/{id}', [BookController::class, 'edit'])->name('edit')->middleware('simple.auth');
-Route::patch('/book/{id}', [BookController::class, 'update'])->name('update')->middleware('simple.auth');
-Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('delete')->middleware('simple.auth');
+Route::get('/book', [BookController::class, 'show'])->name('show')->middleware('simple.auth');
+Route::get('/book/{id}', [BookController::class, 'edit'])->name('edit')->middleware('simple.auth:admin');
+Route::patch('/book/{id}', [BookController::class, 'update'])->name('update')->middleware('simple.auth:admin');
+Route::delete('/book/{id}', [BookController::class, 'destroy'])->name('delete')->middleware('simple.auth:admin');
 Route::get('/search', [BookController::class, 'search'])->name('search')->middleware('simple.auth');
 
 //Login

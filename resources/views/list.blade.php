@@ -37,14 +37,18 @@
                     <td>{{ $b->publisher }}</td>
                     <td>{{ $b->year }}</td>
                     <td>{{ $b->category->name }}</td>
-                    <td>
-                        <a href="{{ route('edit', $b->id) }}" class="btn btn-success">Update</a>
-                        <form action="{{ route('delete', $b->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </td>
+                    @if(Auth::user()->role === 'admin')
+                        <td>
+                            <a href="{{ route('edit', $b->id) }}" class="btn btn-success">Update</a>
+                            <form action="{{ route('delete', $b->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
+                    @else
+                        <td><span class="text-muted">No action</span></td>
+                    @endif
                 </tr>
             @endforeach
         </tbody>
