@@ -26,9 +26,10 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
         "DB_CONNECTION": "mysql",
-        "DB_HOST": "4gg.h.filess.io",
+        "DB_HOST": "g17ppt.h.filess.io",
         "DB_PORT": "3306",
-        "DB_DATABASE": "db2024_stormtorn",
-        "DB_USERNAME": "db2024_stormtorn"
+        "DB_DATABASE": "web prog_howevertea",
+        "DB_USERNAME": "web prog_howevertea",
+        "DB_PASSWORD": "8a8c83609764575ea259b6dfb00126b5faec6062"
     }
 }
