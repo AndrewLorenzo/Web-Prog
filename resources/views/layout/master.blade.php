@@ -114,7 +114,7 @@
         }
 
         .footer-logo span {
-            color: #ff6b00;
+            color: #0d6af4;
         }
 
         .footer-desc {
