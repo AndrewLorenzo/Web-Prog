@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="{{ route('home') }}">BookHub</a>
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}"><span style="color: #000000;">Book</span><span style="color: #ff6b00;">Hub</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -59,13 +59,113 @@
         </div>
     </nav>
     @yield('content')
-     <footer class="bg-dark text-light py-4 mt-auto">
-        <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
-            <p class="mb-2 mb-md-0">
-                &copy; {{ date('Y') }} BookHub. All rights reserved.
-            </p>
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="row gy-4 justify-content-evenly mb-3">
+
+                <!-- About -->
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="{{ route('home') }}" class="footer-logo">Book<span>Hub</span>.</a>
+                    <p class="footer-desc">
+                        Platform all-in-one untuk mencari buku dan menambahkan buku impian Anda dengan mudah.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div class="col-md-4 text-center">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-menu">
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('show') }}">List</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <!-- <div class="col-md-4 text-center text-md-start">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-link"><img src="Assets/facebook.svg" alt="Facebook"></a>
+                        <a href="#" class="social-link"><img src="Assets/twitter.svg" alt="Twitter"></a>
+                        <a href="#" class="social-link"><img src="Assets/instagram.svg" alt="Instagram"></a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; {{ date('Y') }} BookHub. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+    <style>
+        .modern-footer {
+            background-color: #1a1a1a;
+            color: #b0b0b0;
+            padding-top: 70px;
+            padding-bottom: 10px;
+            margin-top: 100px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .footer-logo span {
+            color: #ff6b00;
+        }
+
+        .footer-desc {
+            max-width: 400px;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 100%;
+            height: 3px;
+            background-color: #ff6b00;
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 12px;
+        }
+
+        .footer-menu a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-menu a:hover {
+            color: #ff6b00;
+            transform: translateX(5px);
+        }
+
+        .footer-copyright {
+            border-top: 1px solid #2a2a2a;
+            padding-top: 25px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
     </script>
