@@ -67,7 +67,7 @@
                 <div class="col-md-4 text-center text-md-start">
                     <a href="{{ route('home') }}" class="footer-logo">Book<span>Hub</span>.</a>
                     <p class="footer-desc">
-                        Platform all-in-one untuk mencari buku dan menambahkan buku impian Anda dengan mudah.
+                        Platform all-in-one untuk mencari buku dan menambahkan buku Anda dengan mudah.
                     </p>
                 </div>
 
