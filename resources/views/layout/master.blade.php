@@ -22,10 +22,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" aria-current="page" href="{{ route('home') }}">Home</a>
+                        <a class="nav-link active text-dark link" aria-current="page" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="{{ route('show') }}">List</a>
+                        <a class="nav-link text-dark link" href="{{ route('show') }}">List</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
@@ -46,10 +46,10 @@
                     @else
                     <div class="d-flex">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="{{ route('login') }}">Login</a>
+                            <a class="nav-link text-dark link" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="{{ route('register') }}">Register</a>
+                            <a class="nav-link text-dark link" href="{{ route('register') }}">Register</a>
                         </li>
                     </div>
                         
@@ -163,6 +163,13 @@
             padding-top: 25px;
             text-align: center;
             font-size: 14px;
+        }
+        .nav-link.link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link.link:hover {
+            color: #0d6af4 !important;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
