@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" href="{{ route('home') }}"><span style="color: #000000;">Book</span><span style="color: #ff6b00;">Hub</span></a>
+            <a class="navbar-brand fw-bold" href="{{ route('home') }}"><span style="color: #000000;">Book</span><span style="color: #0d6af4;">Hub</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
