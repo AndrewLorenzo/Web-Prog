@@ -136,7 +136,7 @@
             bottom: -8px;
             width: 100%;
             height: 3px;
-            background-color: #ff6b00;
+            background-color: #0d6af4;
         }
 
         .footer-menu {
@@ -155,8 +155,7 @@
         }
 
         .footer-menu a:hover {
-            color: #ff6b00;
-            transform: translateX(5px);
+            color: #0d6af4;
         }
 
         .footer-copyright {
